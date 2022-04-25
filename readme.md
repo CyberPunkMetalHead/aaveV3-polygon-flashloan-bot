@@ -28,5 +28,6 @@ Go to the brownie-config.yml file, find the polygon_main_infura setting, and cha
 ### Additional Resources
 AAVE V3 Testnet Contracts https://docs.aave.com/developers/deployed-contracts/v3-testnet-addresses
 AAVE V3 Mainnet Contracts Polygon: https://docs.aave.com/developers/deployed-contracts/v3-mainnet/polygon
-Fund your Testnet wallet with Test Matic: https://faucet.polygon.technology/
+Fund your Testnet wallet with Test Matic: https://faucet.polygon.technology/  
+
 AAVE V3 repo: https://github.com/aave/aave-v3-core
