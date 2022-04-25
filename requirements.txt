@@ -1,0 +1,2 @@
+Brownie==0.5.1
+eth_brownie==1.18.1
