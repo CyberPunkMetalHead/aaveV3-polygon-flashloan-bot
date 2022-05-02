@@ -16,7 +16,7 @@ contract simpleFlashLoan is FlashLoanSimpleReceiverBase, Withdrawable {
     bytes params = "";
     uint16 referralCode = 0;
 
-    constructor(address _addressProvider) FlashLoanSimpleReceiverBase(ADDRESSES_PROVIDER) {}
+    constructor(IPoolAddressesProvider _addressProvider) FlashLoanSimpleReceiverBase(_addressProvider) {}
     //IPool POOL = IPoolAddressesProvider.getPool();
     //lendingPool.flashLoan(address(this), asset, amount, params);
 
@@ -50,11 +50,11 @@ contract simpleFlashLoan is FlashLoanSimpleReceiverBase, Withdrawable {
             ;
     }
 
-    function flashloan() public onlyOwner {
-        address asset = 0x82E64f49Ed5EC1bC6e43DAD4FC8Af9bb3A2312EE;
-        uint amount = 0.001 ether;
+    function flashloan(address asset, uint amount) public onlyOwner {
+        //address asset = 0x82E64f49Ed5EC1bC6e43DAD4FC8Af9bb3A2312EE;
+        //uint amount = 1 ether;
         
         _flashLoanSimple(asset, amount);
     }
     
-}   
+} 
