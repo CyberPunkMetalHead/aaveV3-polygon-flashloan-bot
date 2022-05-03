@@ -37,6 +37,8 @@ contract simpleFlashLoan is FlashLoanSimpleReceiverBase, Withdrawable {
         // Approve the LendingPool contract allowance to *pull* the owed amount
         uint amountOwing = amount.add(premium);
         IERC20(asset).approve(address(POOL), amountOwing);
+
+        return true;
     }
 
     function _flashLoanSimple(address asset, uint256 amount) internal {

@@ -1,6 +1,6 @@
 from brownie import simpleFlashLoan, accounts, config, network, interface
 DECIMALS = 1000000000000000000
-MINIMUM_flashloan_contract_WMATIC_BALANCE = 0.2 * DECIMALS
+MINIMUM_flashloan_contract_WMATIC_BALANCE = 0.4 * DECIMALS
 POLYGONSCAN_TX_URL = "https://polygonscan.com/tx/{}"
 
 
@@ -23,6 +23,6 @@ def main():
         wmatic.transfer(flashloan_contract, MINIMUM_flashloan_contract_WMATIC_BALANCE, {"from": acct})
 
     print("Executing flashloan_contract...")
-    tx = flashloan_contract.flashloan(wmatic, int(5 * DECIMALS),  {"from": acct})
+    tx = flashloan_contract.flashloan(wmatic, int(5.2 * DECIMALS),  {"from": acct})
     print("You did it! View your tx here: " + POLYGONSCAN_TX_URL.format(tx.txid))
     return flashloan_contract

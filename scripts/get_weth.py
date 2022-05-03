@@ -18,6 +18,6 @@ def get_wmatic():
         config["wallets"]["from_key"]
     )  # add your keystore ID as an argument to this call
     weth = interface.WmaticInterface(config["networks"][network.show_active()]["wmatic"])
-    tx = weth.deposit({"from": acct, "value": 0.4 *DECIMALS})
+    tx = weth.deposit({"from": acct, "value": 0.3 *DECIMALS})
     print("Received 1 WMMATIC")
     return tx
